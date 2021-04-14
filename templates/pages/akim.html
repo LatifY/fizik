@@ -1,0 +1,40 @@
+{% extends "./base.html" %}
+{% block title %}Fizik Projesi - Elektrik Akımı{% endblock %}
+
+{% block content %}
+    <form action="#" method="POST">
+        <h1>Elektrik Akımı Hesaplama</h1>
+        <hr>
+        <div class="md-form input-group mb-4">
+            <div class="input-group-prepend">
+                <span class="input-group-text md-addon font-weight-bold">Gerilim:</span>
+            </div>
+            <input type="text" name="gerilim" {% if values %} value="{{ values["gerilim"] }}" {% endif %} class="form-control text-right" autocomplete="off">
+            <div class="input-group-append">
+                <span class="input-group-text md-addon">V</span>
+            </div>
+        </div>
+        <div class="md-form input-group mb-4">
+            <div class="input-group-prepend">
+                <span class="input-group-text md-addon font-weight-bold">Direnç:</span>
+            </div>
+            <input type="text" name="direnc" {% if values %} value="{{ values["direnc"] }}" {% endif %} tabindex="2" class="form-control text-right" autocomplete="off">
+            <div class="input-group-append">
+                <span class="input-group-text md-addon">Ω</span>
+            </div>
+        </div>
+        {% if result %}
+            <div class="md-form input-group mb-4">
+                <div class="input-group-prepend">
+                    <span class="input-group-text md-addon font-weight-bold">Akım:</span>
+                </div>
+                <input type="text" value="{{ result }}" readonly="readonly" class="form-control text-right">
+                <div class="input-group-append">
+                    <span class="input-group-text md-addon">I</span>
+                </div>
+            </div>
+        {% endif %} 
+        <input type="submit" value="Hesapla" tabindex="3" class="btn btn-success btn-rounded">
+    </form>
+
+{% endblock %}

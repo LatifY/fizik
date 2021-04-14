@@ -1,0 +1,33 @@
+{% extends "./base.html" %}
+{% block title %}Fizik Projesi - Işık Akısı{% endblock %}
+
+{% block content %}
+    <form action="#" method="POST">
+        <h1>Işık Akısı Hesaplama</h1>
+        <hr>
+        <div class="md-form input-group mb-4">
+            <div class="input-group-prepend">
+                <span class="input-group-text md-addon font-weight-bold">Işık Şiddeti(cd):</span>
+            </div>
+            <input type="text" name="siddet" {% if values %} value="{{ values["siddet"] }}" {% endif %} class="form-control text-right" autocomplete="off">
+            <div class="input-group-append">
+                <span class="input-group-text md-addon">I</span>
+            </div>
+        </div>
+        {% if result %}
+            <div class="md-form input-group mb-4">
+                <div class="input-group-prepend">
+                    <span class="input-group-text md-addon font-weight-bold">Işık Akısı(lm):</span>
+                </div>
+                <input type="text" value="{{ result }}" readonly="readonly" class="form-control text-right">
+                <div class="input-group-append">
+                    <span class="input-group-text md-addon">φ</span>
+                </div>
+            </div>
+        {% endif %} 
+        <input type="submit" value="Hesapla" tabindex="3" class="btn btn-success btn-rounded">
+    </form>
+
+{% endblock %}
+
+

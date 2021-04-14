@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --yellow: #ffd343;
+    --blue: #0cb3a7;
+    --green: #198754;
+}
+
+html,body{
+    overflow-x: hidden;
+}
+body{
+    zoom: 125%;
+}
+
+* {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    background-color: #fff;
+    outline: none;
+    position: relative;
+}
+
+#page-container {
+    position: relative;
+}
+
+#content-wrap {
+    padding-bottom: 2.5rem;
+    margin-bottom: 70px;
+}
+
+
+/*#region Footer*/
+.footerWrap {
+    width:100%;
+    position:fixed;
+    bottom: 0px;
+    background: transparent;
+}
+
+.footerContent {
+    text-align: left;
+    margin:left;
+    float:left;
+    background: transparent;
+}
+
+.footerContent h5{
+    padding: 0px;
+    margin: 5px;
+    background: transparent;
+}
+
+.footerContent a{
+    text-decoration: none;
+    color: var(--green);
+}
+
+.footerContent a:hover{
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+/*#endregion Footer*/
+
+/*#region Container*/
+.container{
+    margin-top: 50px;
+    text-align: center;
+    
+    justify-content: center;
+    align-items: center;
+}
+
+.container .btn-group{
+    margin-top: 60px;
+}
+
+.container .btn-group a{
+    border-left: 2px solid #565b5f;
+}
+
+.container .btn-group a:first-child{
+    border: none;
+}
+
+.container h1{
+    font-size: 80px;
+    transition: .25s linear;
+}
+
+.container h1 a{
+    transition: 300ms all;
+    color: black;
+    text-decoration: none;
+}
+
+.container h1 a:hover{
+    color: white;
+    -webkit-text-stroke: 3px black;
+}
+
+h1 > a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background: var(--green);
+    visibility: hidden;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: .25s linear;
+  }
+  h1 > a:hover:before,
+  h1 > a:focus:before {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+/*#endregion Container*/
+
+/*#region Main*/
+.main{
+    padding: 100px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    margin: 0 auto;
+    display: grid;
+}
+
+/*#endregion*/
+
+/*#region Form*/
+form h1{
+    color: var(--green);
+}
+
+form input{
+    text-align: right;
+}
+/*#endregion*/
+
+
+#submit{
+    background-color: transparent;
+    border-color: transparent;
+    font-size: 18px;
+    color: var(--blue);
+    position: relative;
+    right: 44px;
+    top: 6px;
+    cursor: pointer;
+    
+}
+
+.error{
+    margin: 0 auto;
+    width: 600px;
+}
+/*#region Responsive*/
+@media only screen and (max-width: 1500px){
+    .footerWrap {
+        background: white;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .main{
+        padding: 60px;
+        width: 430px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container h1{
+        font-size: 70px;
+    }
+
+    .main{
+        padding: 40px;
+        width: 430px;
+    }
+
+    .container .btn-group a{
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 540px){
+    .container h1{
+        font-size: 50px;
+    }
+    
+    .footerContent h5{
+        font-size: 12px;
+    }
+
+    .main{
+        padding: 50px;
+        width: 400px;
+    }
+
+    .container .btn-group a{
+        font-size: 10px;
+    }
+}
+/*#endregion Responsive*/
