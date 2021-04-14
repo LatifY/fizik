@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a style="font-weight: bold; margin-right: 40px;" class="navbar-brand" href="#">Fizik Projesi</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="{{ url_for("home") }}">Anasayfa</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Elektriksel Hesaplama
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="{{ url_for("akim") }}">Akım</a></li>
+              <li><a class="dropdown-item" href="{{ url_for("direnc") }}">Direnç</a></li>
+              <li><a class="dropdown-item" href="{{ url_for("gerilim") }}">Gerilim</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Basınç Hesaplama
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="{{ url_for("kati") }}">Katı Basıncı</a></li>
+              <li><a class="dropdown-item" href="{{ url_for("sivi") }}">Sıvı Basıncı</a></li>
+              <li><a class="dropdown-item" href="{{ url_for("gaz") }}">Gaz Basıncı</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Optik Hesaplama
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="{{ url_for("aki") }}">Işık Akısı</a></li>
+              <li><a class="dropdown-item" href="{{ url_for("ortalama") }}">Ortalama Aydınlanma Şiddeti</a></li>
+              <li><a class="dropdown-item" href="{{ url_for("noktasal") }}">Noktasal Aydınlanma Şiddeti</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>

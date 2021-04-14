@@ -1,35 +1,35 @@
-{% extends "./base.html" %}
-{% block title %}Fizik Projesi - Sıvı Basıncı{% endblock %}
+{% extends "././base.html" %}
+{% block title %}Fizik Projesi - Gaz Basıncı{% endblock %}
 
 {% block content %}
     <form action="#" method="POST">
-        <h1>Sıvı Basıncı Hesaplama</h1>
+        <h1>Gaz Basıncı Hesaplama</h1>
         <hr>
         <div class="md-form input-group mb-4">
             <div class="input-group-prepend">
-                <span class="input-group-text md-addon font-weight-bold">Derinlik:</span>
+                <span class="input-group-text md-addon font-weight-bold">Hacim:</span>
             </div>
-            <input type="text" name="derinlik" {% if values %} value="{{ values["derinlik"] }}" {% endif %} class="form-control text-right" autocomplete="off">
+            <input type="text" name="hacim" {% if values %} value="{{ values["hacim"] }}" {% endif %} class="form-control text-right" autocomplete="off">
             <div class="input-group-append">
-                <span class="input-group-text md-addon">h</span>
+                <span class="input-group-text md-addon">V</span>
             </div>
         </div>
         <div class="md-form input-group mb-4">
             <div class="input-group-prepend">
-                <span class="input-group-text md-addon font-weight-bold">Özkütle:</span>
+                <span class="input-group-text md-addon font-weight-bold">Sıcaklık:</span>
             </div>
-            <input type="text" name="ozkutle" {% if values %} value="{{ values["ozkutle"] }}" {% endif %} tabindex="2" class="form-control text-right" autocomplete="off">
+            <input type="text" name="sicaklik" {% if values %} value="{{ values["sicaklik"] }}" {% endif %} tabindex="2" class="form-control text-right" autocomplete="off">
             <div class="input-group-append">
-                <span class="input-group-text md-addon">d</span>
+                <span class="input-group-text md-addon">T</span>
             </div>
         </div>
         <div class="md-form input-group mb-4">
             <div class="input-group-prepend">
-                <span class="input-group-text md-addon font-weight-bold">Yerçekimi İvmesi:</span>
+                <span class="input-group-text md-addon font-weight-bold">Tanecik Sayısı:</span>
             </div>
-            <input type="text" name="ivme" {% if values %} value="{{ values["ivme"] }}" {% else %} value="9.8" {% endif %} tabindex="2" class="form-control text-right" autocomplete="off">
+            <input type="text" name="tanecik" {% if values %} value="{{ values["tanecik"] }}" {% endif %} tabindex="2" class="form-control text-right" autocomplete="off">
             <div class="input-group-append">
-                <span class="input-group-text md-addon">g</span>
+                <span class="input-group-text md-addon">n</span>
             </div>
         </div>
         {% if result %}

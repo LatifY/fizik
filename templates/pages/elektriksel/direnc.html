@@ -1,36 +1,36 @@
-{% extends "./base.html" %}
-{% block title %}Fizik Projesi - Katı Basıncı{% endblock %}
+{% extends "././base.html" %}
+{% block title %}Fizik Projesi - Direnç{% endblock %}
 
 {% block content %}
     <form action="#" method="POST">
-        <h1>Katı Basıncı Hesaplama</h1>
+        <h1>Direnç Hesaplama</h1>
         <hr>
         <div class="md-form input-group mb-4">
             <div class="input-group-prepend">
-                <span class="input-group-text md-addon font-weight-bold">Kuvvet:</span>
+                <span class="input-group-text md-addon font-weight-bold">Gerilim:</span>
             </div>
-            <input type="text" name="kuvvet" {% if values %} value="{{ values["kuvvet"] }}" {% endif %} class="form-control text-right" autocomplete="off">
+            <input type="text" name="gerilim" {% if values %} value="{{ values["gerilim"] }}" {% endif %} class="form-control text-right" autocomplete="off">
             <div class="input-group-append">
-                <span class="input-group-text md-addon">N</span>
+                <span class="input-group-text md-addon">V</span>
             </div>
         </div>
         <div class="md-form input-group mb-4">
             <div class="input-group-prepend">
-                <span class="input-group-text md-addon font-weight-bold">Alan:</span>
+                <span class="input-group-text md-addon font-weight-bold">Akım:</span>
             </div>
-            <input type="text" name="alan" {% if values %} value="{{ values["alan"] }}" {% endif %} tabindex="2" class="form-control text-right" autocomplete="off">
+            <input type="text" name="akim" {% if values %} value="{{ values["akim"] }}" {% endif %} tabindex="2" class="form-control text-right" autocomplete="off">
             <div class="input-group-append">
-                <span class="input-group-text md-addon">m­²</span>
+                <span class="input-group-text md-addon">I</span>
             </div>
         </div>
         {% if result %}
             <div class="md-form input-group mb-4">
                 <div class="input-group-prepend">
-                    <span class="input-group-text md-addon font-weight-bold">Basınç:</span>
+                    <span class="input-group-text md-addon font-weight-bold">Direnç:</span>
                 </div>
                 <input type="text" value="{{ result }}" readonly="readonly" class="form-control text-right">
                 <div class="input-group-append">
-                    <span class="input-group-text md-addon">Pa</span>
+                    <span class="input-group-text md-addon">Ω</span>
                 </div>
             </div>
         {% endif %} 
