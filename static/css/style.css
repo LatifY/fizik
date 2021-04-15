@@ -7,10 +7,10 @@
 }
 
 html,body{
-
+    overflow-x: hidden;
 }
 body{
-    zoom: 125%;
+    zoom: 80%;
 }
 
 * {
@@ -22,6 +22,8 @@ body{
     position: relative;
 }
 
+
+
 #page-container {
     position: relative;
 }
@@ -30,7 +32,6 @@ body{
     padding-bottom: 2.5rem;
     margin-bottom: 70px;
 }
-
 
 /*#region Footer*/
 .footerWrap {
@@ -41,13 +42,13 @@ body{
 }
 
 .footerContent {
-    text-align: left;
-    margin:left;
-    float:left;
+    text-align: center;
+    margin-left: 0;
     background: transparent;
 }
 
 .footerContent h5{
+    font-size: 16px;
     padding: 0px;
     margin: 5px;
     background: transparent;
@@ -59,6 +60,7 @@ body{
 }
 
 .footerContent a:hover{
+    color: var(--green);
     text-decoration: underline;
     text-decoration-thickness: 2px;
 }
@@ -67,7 +69,7 @@ body{
 
 /*#region Main*/
 .main{
-    padding: 100px;
+    padding: 50px;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -129,36 +131,25 @@ form input{
 }
 
 @media only screen and (max-width: 600px) {
-    .container h1{
-        font-size: 70px;
-    }
-
     .main{
         padding: 40px;
         width: 430px;
     }
-
-    .container .btn-group a{
-        font-size: 12px;
-    }
 }
 
 @media only screen and (max-width: 540px){
-    .container h1{
-        font-size: 50px;
-    }
-    
     .footerContent h5{
         font-size: 12px;
     }
 
     .main{
-        padding: 50px;
+        padding: 18px;
         width: 400px;
     }
 
-    .container .btn-group a{
-        font-size: 10px;
+    .main p{
+        font-size: 16px;
+
     }
 }
 /*#endregion Responsive*/
