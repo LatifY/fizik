@@ -1,9 +1,9 @@
 {% extends "././base.html" %}
-{% block title %}Fizik Projesi - Gaz Basıncı{% endblock %}
+{% block title %}Fizik Projesi - Kapalı Kaplardaki Gaz Basıncı{% endblock %}
 
 {% block content %}
     <form action="#" method="POST">
-        <h1>Gaz Basıncı Hesaplama</h1>
+        <h1>Kapalı Kaplardaki Gaz Basıncı Hesaplama</h1>
         <hr>
         <div class="md-form input-group mb-4">
             <div class="input-group-prepend">
@@ -46,4 +46,18 @@
         <input type="submit" value="Hesapla" tabindex="3" class="btn btn-success btn-rounded">
     </form>
 
+    <img src="{{ url_for("static", filename="images/cap.jpg") }}" alt="">
+
+    <div class="info">
+        <p>
+            Kapalı bir kaba gaz konulduğunda gaz molekülleri kabin çeperlerine basınç uygular.  
+            Kapalı kap içerisindeki gaz moleküllerinin basıncı;
+        </p>
+
+        <h4><emp>P= n x R x T / V</emp></h4>
+
+        <p>
+            P: Basınç, n: Tanecik Sayısı, R: Gaz Sabiti (8.3145), T: Sıcaklık, V: Hacim olarak gösterilebilir.
+        </p>
+    </div>
 {% endblock %}

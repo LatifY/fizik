@@ -2,6 +2,9 @@
 {% block title %}Fizik Projesi - Işık Akısı{% endblock %}
 
 {% block content %}
+    <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_aiagjymy.json"  background="transparent"  speed="0.2"  style="width: 100px; height: 100px;"  loop  autoplay></lottie-player>
+
+
     <form action="#" method="POST">
         <h1>Işık Akısı Hesaplama</h1>
         <hr>
@@ -27,6 +30,23 @@
         {% endif %} 
         <input type="submit" value="Hesapla" tabindex="3" class="btn btn-success btn-rounded">
     </form>
+
+
+    <div class="info">
+        <p>
+            Birim zamanda her yöne yayılan toplam ışık miktarına <emp>ışık akısı</emp> denir.
+        </p>
+
+        <p>
+            Işık akısı <emp>φ (fi)</emp> sembolü ile gösterilir. SI birimi <emp>lümendir (lm)</emp>.
+        </p>
+
+        <p>
+            Işık şiddeti I olan kaynağın kapalı yüzeylerde oluşturacağı ışık akısı aşağıda verilen formül ile hesaplanır.
+        </p>
+
+        <h4><emp>φ = 4 x π x I</emp></h4>
+    </div>
 
 {% endblock %}
 

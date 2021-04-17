@@ -36,5 +36,19 @@
         {% endif %} 
         <input type="submit" value="Hesapla" tabindex="3" class="btn btn-success btn-rounded">
     </form>
+    <br>
+    <lottie-player src="{{ url_for("static", filename="lottie/kati.json") }}"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"   controls autoplay></lottie-player>
+    <div class="info">
+        <p>
+            Katı basıncı katı haldeki bir cismin bir başka yüzeye dokunduğunda o yüzeye uyguladığı basınçtır. 
+            Basınç bir yüzeye uygulanan dik kuvvetin yüzeyin alanına oranıdır. Bu durumda formül:
+        </p>
+
+        <h4><emp>P = F/A</emp></h4>
+
+        <p>
+            P: Basınç, F: Kuvvet, A: Alan olarak gösterilebilir.
+        </p>
+    </div>
 
 {% endblock %}

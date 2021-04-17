@@ -2,6 +2,8 @@
 {% block title %}Fizik Projesi - Akım{% endblock %}
 
 {% block content %}
+    <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_nNG8M6.json"  background="transparent"  speed="1"  style="width: 100px; height: 100px;"    autoplay></lottie-player>
+
     <form action="#" method="POST">
         <h1>Akım Hesaplama</h1>
         <hr>
@@ -36,5 +38,22 @@
         {% endif %} 
         <input type="submit" value="Hesapla" tabindex="3" class="btn btn-success btn-rounded">
     </form>
+
+    <div class="info">
+        <p>
+            Akım ampermetre ile ölçülüyor olsa da devredeki diğer birimler olan <emp>gerilim</emp> ve <emp>direnç</emp> yoluyla da bulunabilir.
+        </p>
+
+        <p>
+            Bunun için fizikteki <emp>V = i x R</emp> formülünden yararlanıyoruz. V: Gerilim, i: Akım, R: Direnç olarak gösterilebilir. 
+            Bu formüle göre 3 eleman da diğer ikisi kullanılarak bulunabiliyor.
+        </p>
+
+        <p>Bizim akımı bulmak için bu formülü düzgün hale getirmemiz gerekiyor. Akımı bulmak istediğimizden i yi tek bırakacağız. Bu durumda;</p>
+
+        <h4><emp>V/R = i</emp></h4>
+
+        <p>formülü ortaya çıkıyor..</p>
+    </div>
 
 {% endblock %}
