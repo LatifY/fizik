@@ -1,0 +1,58 @@
+{% extends "././base.html" %}
+{% block title %}Fizik Hesaplamaları - Gezegenlerde Ağırlık{% endblock %}
+
+{% block content %}
+<lottie-player src="https://assets7.lottiefiles.com/packages/lf20_RGDQZy.json"  background="transparent"  speed="1"  style="width: 150px; height: 150px;"  loop  autoplay></lottie-player>
+    <form action="#" method="POST">
+        <h1>Gezegenlerde Ağırlık Hesaplama</h1>
+        <hr>
+        <div class="md-form input-group mb-4">
+            <div class="input-group-prepend">
+                <span class="input-group-text md-addon font-weight-bold">Kütle</span>
+            </div>
+            <input type="text" name="kutle" {% if values %} value="{{ values["kutle"] }}" {% endif %} class="form-control text-right" autocomplete="off">
+            <div class="input-group-append">
+                <span class="input-group-text md-addon">kg</span>
+            </div>
+        </div>
+        {% if planets %}
+            {% for planet in planets %}
+                <div class="md-form input-group mb-4">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text md-addon font-weight-bold">{{ planet }}</span>
+                    </div>
+                    <input type="text" value="{{ planets[planet] }}" readonly="readonly" class="form-control text-right">
+                    <div class="input-group-append">
+                        <span class="input-group-text md-addon">N</span>
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %} 
+        <input type="submit" value="Hesapla" tabindex="3" class="btn btn-success btn-rounded">
+    </form>
+
+
+    <div class="info">
+        <p>
+            Her yerde kütlemiz aynıdır. Fakat ağırlık, değişkenlik gösterebilir. Çünkü:
+        </p>
+
+        <h4><emp>Ağırlık = Kütle * Yer Çekimi</emp></h4>
+
+        <p>Formülü söz konusudur. Gezegenlerin de yer çekimi farklılık göstereceğinden ağırlık değişkendir.
+            İşte Günes Sistemi'ndeki Gezegenlerdeki yer çekimi kuvvetleri:
+        </p>
+
+        <p>
+            <emp>Merkür: </emp> 3.7 <br>
+            <emp>Venüs: </emp> 8.87 <br>
+            <emp>Dünya: </emp> 9.8 <br>
+            <emp>Mars: </emp> 3.72 <br>
+            <emp>Jüpiter: </emp> 24.79 <br>
+            <emp>Satürn: </emp> 10.44 <br>
+            <emp>Uranüs: </emp> 8.87 <br>
+            <emp>Neptün: </emp> 11.15 <br>
+        </p>
+    </div>
+
+{% endblock %}

@@ -134,6 +134,26 @@ def noktasal():
     return render_template("pages/optik/noktasal.html")
 #endregion
 
+@app.route("/gezegenlerde-agirlik", methods=["GET","POST"])
+def agirlik():
+    if request.method == "POST":
+        kutle = request.form["kutle"]
+        if kutle:
+            kutle = float(kutle)
+            dunya = round(kutle * 9.8,2)
+            merkur = round(kutle * 3.7,2)
+            mars = round(kutle * 3.72,2)
+            saturn = round(kutle * 10.44,2)
+            uranus = round(kutle * 8.87,2)
+            venus = round(kutle * 8.87,2)
+            neptun = round(kutle * 11.15,2)
+            jupiter = round(kutle * 24.79,2)
+            values = {"kutle":kutle}
+            planets = {"Merkür":merkur, "Venüs":venus, "Dünya":dunya, "Mars":mars, "Jüpiter":jupiter, "Satürn":saturn, "Uranüs":uranus, "Neptün":neptun}
+            return render_template("pages/uzay/agirlik.html", planets=planets, values=values)
+    return render_template("pages/uzay/agirlik.html")
+
+
 
 @app.errorhandler(404)
 def page_not_found(error):
