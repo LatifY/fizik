@@ -39,6 +39,8 @@
         <input type="submit" value="Hesapla" tabindex="3" class="btn btn-success btn-rounded">
     </form>
 
+    <lottie-player src="{{ url_for("static", filename="lottie/gerilim.json") }}"  background="transparent"  speed="1"  style="width: 300px; height: 300px;" controls  autoplay></lottie-player>
+
     <div class="info">
         <p>
             Gerilim devrede voltmetre ile ölçülür. 
@@ -50,6 +52,8 @@
         </p>
 
         <h4><emp>V = i x R</emp></h4>
+
+        <lottie-player src="{{ url_for("static", filename="lottie/vir.json") }}"  background="transparent"  speed="1"  style="width: 200px; height: 200px;"  autoplay></lottie-player>
 
         <p>
             formülünden yararlanıyoruz. V: Gerilim, i: Akım, R: Direnç olarak gösterilebilir. 
