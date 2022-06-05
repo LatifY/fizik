@@ -17,34 +17,21 @@
               <li><a class="dropdown-item" href="{{ url_for("akim") }}">Akım</a></li>
               <li><a class="dropdown-item" href="{{ url_for("direnc") }}">Direnç</a></li>
               <li><a class="dropdown-item" href="{{ url_for("gerilim") }}">Gerilim</a></li>
+              <li><a class="dropdown-item" href="{{ url_for("siga") }}">Sığa (I)</a></li>
+              <li><a class="dropdown-item" href="{{ url_for("siga2") }}">Sığa (II)</a></li>
+              <li><a class="dropdown-item" href="{{ url_for("kuvvet") }}">Kuvvet</a></li>
             </ul>
           </li>
+
+
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Basınç Hesaplama
+              Enerji Hesaplama
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="{{ url_for("kati") }}">Katı Basıncı</a></li>
-              <li><a class="dropdown-item" href="{{ url_for("sivi") }}">Sıvı Basıncı</a></li>
-              <li><a class="dropdown-item" href="{{ url_for("gaz") }}">(K) Gaz Basıncı</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Optik Hesaplama
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="{{ url_for("aki") }}">Işık Akısı</a></li>
-              <li><a class="dropdown-item" href="{{ url_for("ortalama") }}">Ortalama Aydınlanma Şiddeti</a></li>
-              <li><a class="dropdown-item" href="{{ url_for("noktasal") }}">Noktasal Aydınlanma Şiddeti</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Uzay Hesaplamaları
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="{{ url_for("agirlik") }}">Gezegenlerde Ağırlık</a></li>
+              <li><a class="dropdown-item" href="{{ url_for("kinetik") }}">Kinetik Enerji</a></li>
+              <li><a class="dropdown-item" href="{{ url_for("potansiyel") }}">Potansiyel Enerji</a></li>
+              <li><a class="dropdown-item" href="{{ url_for("esneklik") }}">Esneklik Potansiyel Enerji</a></li>
             </ul>
           </li>
         </ul>

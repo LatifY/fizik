@@ -1,0 +1,80 @@
+{% extends "././base.html" %}
+{% block title %}Fizik Hesaplamaları - Gerilim{% endblock %}
+
+{% block content %}
+    <form action="#" method="POST">
+        <h1>Yükler Arasındaki Elektriksel Kuvvet</h1>
+        <hr>
+        <div class="md-form input-group mb-4">
+            <div class="input-group-prepend">
+                <span class="input-group-text md-addon font-weight-bold">Yük 1 (+/-):</span>
+            </div>
+            <input type="text" name="yuk1" {% if values %} value="{{ values["yuk1"] }}" {% endif %} class="form-control text-right" autocomplete="off">
+            <div class="input-group-append">
+                <span class="input-group-text md-addon">Q₁</span>
+            </div>
+        </div>
+        <div class="md-form input-group mb-4">
+            <div class="input-group-prepend">
+                <span class="input-group-text md-addon font-weight-bold">Yük 2 (+/-):</span>
+            </div>
+            <input type="text" name="yuk2" {% if values %} value="{{ values["yuk2"] }}" {% endif %} class="form-control text-right" autocomplete="off">
+            <div class="input-group-append">
+                <span class="input-group-text md-addon">Q₂</span>
+            </div>
+        </div>
+        <div class="md-form input-group mb-4">
+            <div class="input-group-prepend">
+                <span class="input-group-text md-addon font-weight-bold">Yükler Arası Mesafe (m):</span>
+            </div>
+            <input type="text" name="mesafe" {% if values %} value="{{ values["mesafe"] }}" {% endif %} class="form-control text-right" autocomplete="off">
+            <div class="input-group-append">
+                <span class="input-group-text md-addon">d</span>
+            </div>
+        </div>
+        <div class="md-form input-group mb-4">
+            <div class="input-group-prepend">
+                <span class="input-group-text md-addon font-weight-bold">Coulomb Sabiti:</span>
+            </div>
+            <input type="text" value="9.10⁹" readonly="readonly" class="form-control text-right" autocomplete="off">
+            <div class="input-group-append">
+                <span class="input-group-text md-addon">k</span>
+            </div>
+        </div>
+        {% if result %}
+            <div class="md-form input-group mb-4">
+                <div class="input-group-prepend">
+                    <span class="input-group-text md-addon font-weight-bold">Kuvvet:</span>
+                </div>
+                <input type="text" value="{{ result }}x10⁹" readonly="readonly" class="form-control text-right">
+                <div class="input-group-append">
+                    <span class="input-group-text md-addon">N</span>
+                </div>
+            </div>
+        {% endif %} 
+        <input type="submit" value="Hesapla" tabindex="3" class="btn btn-success btn-rounded">
+    </form>
+
+    <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_5kxw8tvi.json"  background="transparent"  speed="2"  style="width: 300px; height: 300px;" controls  autoplay></lottie-player>
+
+    <div class="info">
+        <p>
+            Gerilim devrede voltmetre ile ölçülür. 
+            Ancak eğer devredeki diğer birimler olan <emp>direnç</emp> ve <emp>akım</emp> değerlerini biliyorsak da bulabiliriz.
+        </p>
+
+        <p>
+            Bunun için fizikteki;
+        </p>
+
+        <h4><emp>V = i x R</emp></h4>
+
+        <lottie-player src="{{ url_for("static", filename="lottie/vir.json") }}"  background="transparent"  speed="1"  style="width: 200px; height: 200px;"  autoplay></lottie-player>
+
+        <p>
+            formülünden yararlanıyoruz. V: Gerilim, i: Akım, R: Direnç olarak gösterilebilir. 
+            Bu formüle göre 3 eleman da diğer ikisi kullanılarak bulunabiliyor.
+        </p>
+    </div>
+
+{% endblock %}
