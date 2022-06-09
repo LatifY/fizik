@@ -1,5 +1,6 @@
 from flask import Flask, url_for, render_template, request, redirect, session
 import os
+import math
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ.get("SECRET_KEY")
@@ -137,6 +138,30 @@ def potansiyel():
     return render_template("pages/enerji/potansiyel.html")
 #endregion
 
+#region ENERJI
+@app.route("/dusme", methods=["GET","POST"])
+def dusme():
+    if request.method == "POST":
+        yukseklik= request.form["yukseklik"]
+        hiz = request.form["hiz"]
+        g = request.form["g"]
+        if hiz and yukseklik and g:
+            hiz = float(hiz)
+            yukseklik = float(yukseklik)
+            g = float(g)
+            sonhiz = math.sqrt(hiz * hiz + 2 * g * yukseklik)
+            sure = (sonhiz - hiz) / g 
+            sonhiz = float("{:.2f}".format(sonhiz))
+            sure = float("{:.2f}".format(sure))
+            results = {"sonhiz":sonhiz, "sure":sure}
+            values = {"hiz":hiz,"yukseklik":yukseklik, "g":g}
+            return render_template("pages/diger/dusme.html", results=results, values=values)
+    return render_template("pages/diger/dusme.html")
+#endregion
+
+@app.route("/hakkinda", methods=["GET", "POST"])
+def hakkinda():
+    return render_template("pages/hakkinda.html")
 
 @app.errorhandler(404)
 def page_not_found(error):
